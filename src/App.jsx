@@ -1,22 +1,27 @@
 import Nav from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
+import data from "./data.js";
 import "./index.css";
 
 function App() {
+  const cards = data.map(function (item) {
+    return (
+      <Card
+        image={item.coverImg}
+        rating={item.stats.rating}
+        numOfRatings={item.stats.reviewCount}
+        location={item.location}
+        title={item.title}
+        price={item.price}
+      />
+    );
+  });
   return (
     <div>
       <Nav />
       <Hero />
-      <Card
-        image="katie-zaferes.png"
-        imageStar="star.png"
-        rating="5.0"
-        numOfRatings="(6) "
-        country="USA"
-        title="Life lessons with Katie Zaferes"
-        price="$135"
-      />
+      {cards}
     </div>
   );
 }
