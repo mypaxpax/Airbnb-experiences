@@ -22,7 +22,7 @@ function App() {
     <div>
       <Nav />
       <Hero />
-      {cards}
+      <section className="card-list">{cards}</section>
     </div>
   );
 }
