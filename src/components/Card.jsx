@@ -9,7 +9,7 @@ function Card(props) {
         <span className="cards--box--grey">{props.location}</span>
       </div>
       <p>{props.title}</p>
-      <p>
+      <p className="card-price">
         <span className="bold">From {props.price}</span> / person
       </p>
     </div>
