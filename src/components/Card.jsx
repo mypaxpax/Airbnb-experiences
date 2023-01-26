@@ -1,6 +1,13 @@
 function Card(props) {
+  let badgeText;
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.location === "Online") {
+    badgeText = "ONLINE";
+  }
   return (
     <div className="cards">
+      {badgeText && <div className="cards--badge">{badgeText}</div>}
       <img className="cards--image" src={`../src/assets/${props.image}`}></img>
       <div className="cards--box">
         <img className="cards--box--star" src="./src/assets/star.png"></img>
