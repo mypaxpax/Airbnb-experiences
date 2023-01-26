@@ -1,19 +1,19 @@
-import starIcon from "../assets/star.png";
-import katiePhoto from "../assets/katie-zaferes.png";
-
-function Card() {
+function Card(props) {
   return (
     <div className="cards">
-      <img className="cards--image" src={katiePhoto}></img>
+      <img className="cards--image" src={`/src/assets/${props.image}`}></img>
       <div className="cards--box">
-        <img className="cards--box--star" src={starIcon}></img>
-        <span className="cards--box--rating">5.0</span>
-        <span className="cards--box--grey">(6) • </span>
-        <span className="cards--box--grey">USA</span>
+        <img
+          className="cards--box--star"
+          src={`/src/assets/${props.imageStar}`}
+        ></img>
+        <span className="cards--box--rating">{props.rating}</span>
+        <span className="cards--box--grey">({props.numOfRatings}) • </span>
+        <span className="cards--box--grey">{props.country}</span>
       </div>
-      <p>Life lessons with Katie Zaferes</p>
+      <p>{props.title}</p>
       <p>
-        <span className="bold">From $136</span>/ person
+        <span className="bold">From {props.price}</span> / person
       </p>
     </div>
   );
