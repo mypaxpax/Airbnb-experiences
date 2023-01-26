@@ -10,6 +10,10 @@ body {
   padding: 0px;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .nav {
   height: 70px;
   display: flex;
@@ -36,4 +40,34 @@ body {
 .hero > p {
   margin-top: 0;
   max-width: 320px;
+}
+
+.cards {
+  width: 175px;
+  font-size: 12px;
+  margin: 30px 30px;
+}
+
+.cards--image {
+  width: 100%;
+  border-radius: 9px;
+}
+
+.cards--box {
+  display: flex;
+  align-items: center;
+}
+
+.cards--box--star {
+  height: 14px;
+  border-radius: 0.5px;
+}
+
+.cards--box--grey {
+  color: #918e9b;
+}
+
+.cards--box--rating {
+  color: #222222;
+  font-size: 12px;
 }
