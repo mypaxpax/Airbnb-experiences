@@ -1,5 +1,6 @@
 import Nav from "./components/Navbar";
 import Hero from "./components/Hero";
+import Card from "./components/Card";
 import "./index.css";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Nav />
       <Hero />
+      <Card />
     </div>
   );
 }
